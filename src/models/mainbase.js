@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 
 const ReceptSchema = new mongoose.Schema({
-    name :{
-        type: String,
+    valor :{
+        type: Integer,
         require: true,
-
     },
 
     insertedAt: {
