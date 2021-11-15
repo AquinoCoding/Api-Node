@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 
 const ReceptSchema = new mongoose.Schema({
-    valor :{
-        type: Integer,
+    values :{
+        type: String,
+        require: true,
+    },
+
+    username: {
+        type: String,
         require: true,
     },
 
@@ -11,4 +16,8 @@ const ReceptSchema = new mongoose.Schema({
         default: Date.now,
     }
 
-})
+});
+
+const SaveDataBase = mongoose.model('SaveDataBase', ReceptSchema);
+
+module.exports = SaveDataBase;
